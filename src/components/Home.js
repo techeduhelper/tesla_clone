@@ -6,35 +6,35 @@ function Home() {
     return (
         <Container>
             <Section
-                title="Model-S"
+                title="model-s"
                 description="Order Online For More Advantages"
                 backgroundImg="model-s.jpg"
                 leftBtntext="sda"
                 rightBtntext="dsd"
             />
             <Section
-                title="Model-X"
+                title="model-x"
                 description="Order Online For More Advantages"
                 backgroundImg="model-x.jpg"
                 leftBtntext="sda"
                 rightBtntext="dsd"
             />
             <Section
-                title="Model-Y"
-                description="Order Online For More Advantages"
+                title="model-y"
+                description="Order Online Today now"
                 backgroundImg="model-y.jpg"
                 leftBtntext="sda"
                 rightBtntext="dsd"
             />
             <Section
-                title="Model-3"
+                title="model-3"
                 description="Order Online For More Advantages"
                 backgroundImg="model-3.jpg"
                 leftBtntext="sda"
                 rightBtntext="dsd"
             />
             <Section
-                title="Model-S"
+                title="model-S"
                 description="Order Online For More Advantages"
                 backgroundImg="model-s.jpg"
                 leftBtntext="sda"

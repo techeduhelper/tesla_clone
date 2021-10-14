@@ -1,18 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
+import Slide from 'react-reveal/Slide';
 
-function Section({title, description, backgroundImg}) {
+
+function Section({ title, description, backgroundImg }) {
   return (
     <Wrap bgImage={backgroundImg}>
-      <ItemText>
-        <h1>{title}</h1>
-        <p>{description}</p>
-      </ItemText>
+      <Slide left>
+        <ItemText>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </ItemText>
+      </Slide>
       <Button>
-        <ButtonGroup>
-          <LeftButton>Custom Orders</LeftButton>
-          <RightButton>More Details</RightButton>
-        </ButtonGroup>
+        <Fade bottom>
+          <ButtonGroup>
+            <LeftButton>Custom Orders</LeftButton>
+            <RightButton>More Details</RightButton>
+          </ButtonGroup>
+        </Fade>
         <DownArrow src="/images/down-arrow.svg" />
       </Button>
     </Wrap>
@@ -32,7 +39,7 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: space-between; //vertical
   align-items: center; //horizontal
-  background-image: ${props => `url("/images/${props.bgImage}")`}
+  background-image: ${(props) => `url("/images/${props.bgImage}")`};
 `;
 const ItemText = styled.div`
   padding-top: 15vh;
@@ -41,12 +48,12 @@ const ItemText = styled.div`
 const ButtonGroup = styled.div`
   display: flex;
   padding-bottom: 40px;
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `;
 const LeftButton = styled.div`
-  background-color: #B3B3B3;
+  background-color: #b3b3b3;
   color: black;
   font-family: sans-serif;
   height: 46px;
@@ -62,27 +69,22 @@ const LeftButton = styled.div`
   margin: 12px;
   &:hover {
     color: white;
-    opacity: 0.60;
+    opacity: 0.6;
   }
-  
 `;
 const RightButton = styled(LeftButton)`
   background: white;
   color: black;
   &:hover {
     color: green;
-    opacity: 0.60;
+    opacity: 0.6;
   }
 `;
-
 
 const DownArrow = styled.img`
   height: 40px;
   padding-bottom: 30px;
   animation: move-chevron infinite 1.5s;
-
 `;
 
-const Button = styled.div`
-`
-
+const Button = styled.div``;
